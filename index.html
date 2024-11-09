@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Coupon Code Today - Amazon Coupon Code 90% off Any Item</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Link to Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #2e4053;
+            padding: 15px 200px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s;
+        }
+
+        nav a i {
+            margin-right: 8px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #ffdd57;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 20px;
+            padding: 5px 10px;
+        }
+
+        .search-container input[type="text"] {
+            border: none;
+            padding: 8px;
+            font-size: 14px;
+            font-weight: 400;
+            border-radius: 20px;
+            outline: none;
+            width: 200px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .search-container input[type="text"]::placeholder {
+            color: #aaa;
+        }
+
+        .search-container button {
+            background-color: #ffdd57;
+            border: none;
+            color: #333;
+            padding: 8px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-left: 5px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .search-container button:hover {
+            background-color: #f0c741;
+        }
+
+        .sidebar {
+            background-color: #f9f9f9;
+            width: 250px;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar .shop-logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .sidebar .shop-logo img {
+            width: 100%;
+            max-width: 120px;
+            border-radius: 8px;
+        }
+
+        .sidebar .shop-logo button {
+            background-color: #ffdd57;
+            border: none;
+            padding: 10px 20px;
+            color: #333;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .sidebar .shop-logo button:hover {
+            background-color: #f0c741;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15px;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            .search-container {
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .search-container input[type="text"] {
+                width: 100%;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header .logo {
+                font-size: 20px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            .search-container button {
+                padding: 6px 10px;
+                font-size: 13px;
+            }
+        }
+
+
+        .main-content {
+            display: flex;
+            gap: 20px;
+            padding: 20px 200px;
+        }
+
+
+        .sidebar {
+            width: 250px;
+            height: fit-content;
+        }
+
+
+        .coupons {
+            flex-grow: 1;
+            max-width: 600px;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+
+        .coupon-card {
+            display: flex;
+            align-items: center;
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            gap: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .coupon-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+
+        .coupon-logo {
+            background-color: #f0f7ff;
+            color: #007bff;
+            font-weight: 600;
+            font-size: 18px;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 90px;
+            height: 90px;
+        }
+
+        .coupon-logo span {
+            display: block;
+        }
+
+
+        .coupon-details {
+            flex-grow: 1;
+        }
+
+        .coupon-details h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin: 0 0 8px;
+        }
+
+        .coupon-details p {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+
+        }
+
+        .coupon-button-type .coupon-deal,
+        .coupon-button-type .coupon-print,
+        .coupon-button-type .coupon-code {
+            line-height: 1;
+            padding: 14px 38px;
+            background: #fc8c99;
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: 600;
+            display: inline-block;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            margin-bottom: 2px;
+            min-width: 195px;
+            text-align: center;
+        }
+
+        .coupon-button-type .coupon-code {
+            color: #444444;
+            background: linear-gradient(315deg, rgba(0, 0, 0, 0.06) 10%, rgba(0, 0, 0, 0) 15%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.06) 40%, rgba(0, 0, 0, 0.06) 60%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0) 85%, rgba(0, 0, 0, 0.06) 90%) repeat scroll 0 0/6px 6px rgba(0, 0, 0, 0);
+            text-align: right;
+            padding: 10px 12px;
+            font-size: 20px;
+            border: 2px solid #DDDDDD;
+            position: relative;
+        }
+
+        .coupon-button-type .coupon-code .code-text {
+            text-transform: uppercase;
+        }
+
+        .coupon-button-type .coupon-code .get-code {
+            position: absolute;
+            left: -2px;
+            top: -2px;
+            background: #2e4053;
+            color: #FFFFFF;
+            font-size: 16px;
+            padding: 14px 15px 14px 14px;
+            border-top-left-radius: 2px;
+            border-bottom-left-radius: 2px;
+            transition: all 0.5s ease;
+        }
+
+        .coupon-button-type .coupon-code .get-code:after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            border-top: 44px solid transparent;
+            border-left: 44px solid #2e4053;
+            position: absolute;
+            right: -44px;
+            top: 0;
+        }
+
+        .coupon-button-type .coupon-code .get-code:hover {
+            padding-right: 5px;
+            transition: all 0.5s ease;
+        }
+
+        .expiry {
+            font-size: 12px;
+            color: #888;
+            margin-top: 5px;
+        }
+
+        .Verified {
+            color: #009b00;
+            font-weight: bold;
+            margin-right: 10PX;
+        }
+
+
+
+        footer {
+            background-color: #2e4053;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #fff;
+        
+        }
+
+        footer a {
+            margin: 0 15px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 600px) {
+            footer div a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Coupon Today</div>
+        <nav>
+            <a href="#"><i class="fas fa-tags"></i>Veterans Day Deals 2024</a>
+            <a href="#"><i class="fas fa-list-ul"></i>TOP 10 Lists</a>
+            <a href="#"><i class="fas fa-gift"></i>Free Stuff</a>
+        </nav>
+        <div class="search-container">
+            <input type="text" placeholder="Search for any coupons">
+            <button onclick="window.location.href='  ';">Search</button>
+        </div>
+    </header>
+    <!-- Main Content Container -->
+    <div class="main-content">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="shop-logo">
+                <img src="Amazon-Coupons.jpg" alt="Amazon Logo">
+                <button>Shop</button>
+            </div>
+            <h3>86 Offers Available</h3>
+            <div class="offers-filter">
+                <label><input type="checkbox"> Verified Offers</label><br>
+                <label><input type="checkbox"> Deal</label><br>
+                <label><input type="checkbox"> Coupon</label>
+            </div>
+            <h3>Overview of Amazon Coupon Codes</h3>
+            <p>
+                Amazon coupon codes are special promotional codes offered by Amazon that provide discounts on various products and services available on their platform. These codes can be applied during the checkout process to reduce the total purchase price. Amazon often distributes these coupon codes through email newsletters, affiliate promotions, or on specific product pages. Users can enter the code in the designated box at checkout to claim the discount. In addition to general promo codes, Amazon also offers "clippable coupons" directly on the product page, which can be added to the cart and automatically applied at checkout. These coupons can offer percentage-based discounts, dollar-off savings, or other exclusive offers. It’s important for users to check for any expiration dates or terms and conditions associated with the coupon code before use.
+            </p>
+        </aside>
+
+        <!-- Coupons Section -->
+        <div class="coupons">
+            <div class="coupon-card">
+                <div class="coupon-logo">
+                    <span>CODE COUPON</span>
+                </div>
+                <div class="coupon-details">
+                    <h4>Get $15 Credit On $50+ Household Goods Order</h4>
+                    <p>Save with free shipping and free returns on all orders of $99.</p>
+                    <div class="coupon-detail coupon-button-type">
+                        <a href="#" class="coupon-button coupon-code" data-aff-url=" ">
+                            <span class="code-text">EMIAXHGF</span>
+                            <span class="get-code">Get Code</span>
+                        </a>
+                    </div>
+                    <p class="expiry"><SPAN class="Verified">Verified</SPAN>Expires 10/02/2025</p>
+                </div>
+            </div>
+
+            <div class="coupon-card">
+                <div class="coupon-logo">
+                    <span>$20
+                        OFF
+                        COUPON</span>
+                </div>
+                <div class="coupon-details">
+                    <h4>Save $20 Off With Promo Code Ps10 On $50+ Personal Shopper Orders</h4>
+                    <p>Save with free shipping and free returns on all orders of $99.</p>
+                    <div class="coupon-detail coupon-button-type">
+                        <a href="#" class="coupon-button coupon-code" data-aff-url=" ">
+                            <span class="code-text">EMIAQGEY</span>
+                            <span class="get-code">Get Code</span>
+                        </a>
+                    </div>
+                    <p class="expiry"><SPAN class="Verified">Verified</SPAN>Expires 06/01/2025</p>
+                </div>
+            </div>
+
+            <div class="coupon-card">
+                <div class="coupon-logo">
+                    <span>$10
+                        OFF
+                        COUPON</span>
+                </div>
+                <div class="coupon-details">
+                    <h4>Use Code 5offused For $10 Off Your First Warehouse Order For Students</h4>
+                    <p>Save with free shipping and free returns on all orders of $99.</p>
+                    <div class="coupon-detail coupon-button-type">
+                        <a href="#" class="coupon-button coupon-code" data-aff-url=" ">
+                            <span class="code-text">EMIAJFST</span>
+                            <span class="get-code">Get Code</span>
+                        </a>
+                    </div>
+                    <p class="expiry"><SPAN class="Verified">Verified</SPAN>Expires 09/02/2025</p>
+                </div>
+            </div>
+
+            <div class="coupon-card">
+                <div class="coupon-logo">
+                    <span>$30
+                        OFF
+                        COUPON</span>
+                </div>
+                <div class="coupon-details">
+                    <h4>Get A $30 Off Fire Tv Max Stick With Amazon Promo Code - Select Users</h4>
+                    <p>Save with free shipping and free returns on all orders of $99.</p>
+                    <div class="coupon-detail coupon-button-type">
+                        <a href="#" class="coupon-button coupon-code" data-aff-url=" ">
+                            <span class="code-text">EMIAZPUDS</span>
+                            <span class="get-code">Get Code</span>
+                        </a>
+                    </div>
+                    <p class="expiry"><SPAN class="Verified">Verified</SPAN>Expires 08/02/2025</p>
+                </div>
+            </div>
+
+            <div class="coupon-card">
+                <div class="coupon-logo">
+                    <span>CODE
+                        COUPON </span>
+                </div>
+                <div class="coupon-details">
+                    <h4>Prime Members: Spend $45+ On Grubhub Orders & Get $10 Amazon Gift Card</h4>
+                    <p>Save with free shipping and free returns on all orders of $99.</p>
+                    <div class="coupon-detail coupon-button-type">
+                        <a href="#" class="coupon-button coupon-code" data-aff-url=" ">
+                            <span class="code-text">EMIAFJJG</span>
+                            <span class="get-code">Get Code</span>
+                        </a>
+                    </div>
+                    <p class="expiry"><SPAN class="Verified">Verified</SPAN>Expires 01/02/2025</p>
+                </div>
+            </div>
+
+            <div class="coupon-card">
+                <div class="coupon-logo">
+                    <span>$35
+                        OFF</span>
+                </div>
+                <div class="coupon-details">
+                    <h4>$35 Off Your First Prime Now Order + Free 2-hour Delivery For Prime Members</h4>
+                    <p>Save with free shipping and free returns on all orders of $99.</p>
+                    <div class="coupon-detail coupon-button-type">
+                        <a href="#" class="coupon-button coupon-code" data-aff-url=" ">
+                            <span class="code-text">EMIAHTPL</span>
+                            <span class="get-code">Get Code</span>
+                        </a>
+                    </div>
+                    <p class="expiry"><SPAN class="Verified">Verified</SPAN>Expires 6/01/2025</p>
+                </div>
+            </div>
+
+            <div class="coupon-card">
+                <div class="coupon-logo">
+                    <span>$20
+                        OFF
+                        COUPON</span>
+                </div>
+                <div class="coupon-details">
+                    <h4>Get $20 Off $25+ Select Locker Pickup Orders W/ Code Pickup10off</h4>
+                    <p>Save with free shipping and free returns on all orders of $99.</p>
+                    <div class="coupon-detail coupon-button-type">
+                        <a href="#" class="coupon-button coupon-code" data-aff-url=" ">
+                            <span class="code-text">EMIAWREY</span>
+                            <span class="get-code">Get Code</span>
+                        </a>
+                    </div>
+                    <p class="expiry"><SPAN class="Verified">Verified</SPAN>Expires 29/12/2024</p>
+                </div>
+            </div>
+
+            <div class="coupon-card">
+                <div class="coupon-logo">
+                    <span>UP TO
+                        70%
+                        OFF</span>
+                </div>
+                <div class="coupon-details">
+                    <h4>Up To 70% Off With Amazon Coupon</h4>
+                    <p>Save with free shipping and free returns on all orders of $99.</p>
+                    <div class="coupon-detail coupon-button-type">
+                        <a href="#" class="coupon-button coupon-code" data-aff-url=" ">
+                            <span class="code-text">EMIAPOIU</span>
+                            <span class="get-code">Get Code</span>
+                        </a>
+                    </div>
+                    <p class="expiry"><SPAN class="Verified">Verified</SPAN>Expires 8/01/2025</p>
+                </div>
+            </div>
+
+            <div class="coupon-card">
+                <div class="coupon-logo">
+                    <span>UP TO
+                        90%
+                        OFF </span>
+                </div>
+                <div class="coupon-details">
+                    <h4>Amazon Prime ⚡exclusive⚡ Promo Codes</h4>
+                    <p>Save with free shipping and free returns on all orders of $99.</p>
+                    <div class="coupon-detail coupon-button-type">
+                        <a href="#" class="coupon-button coupon-code" data-aff-url=" ">
+                            <span class="code-text">EMIAMNBV</span>
+                            <span class="get-code">Get Code</span>
+                        </a>
+                    </div>
+                    <p class="expiry"><SPAN class="Verified">Verified</SPAN>Expires 6/01/2025</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<br><br>
+        <footer>
+            <div>
+                <a href="#">Categories</a>
+                <a href="#">About Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Disclaimer</a>
+            </div>
+            <div style="margin-top: 10px;">
+                &copy; 2024<a href="#">coupontoday.github.io</a>
+            </div>
+        </footer>
+</body>
+
+</html>
